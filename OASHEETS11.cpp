@@ -22,7 +22,7 @@ int main(){
         if(ascii>=65 && ascii<=90 && capitalchars==false){
             capitalchars = true;
         }
-        else if(ascii>=47 && ascii<=122 && smallchars==false){
+        else if(ascii>=97 && ascii<=122 && smallchars==false){
             smallchars = true;
         }
         else if(ascii>=48 && ascii<=57 && integerval==false){
@@ -33,7 +33,7 @@ int main(){
         }
     }
 
-    if(smallchars==false || specialchars==false || integerval==false || specialchars==false){
+    if(smallchars==false || capitalchars==false || integerval==false || specialchars==false){
         cout<<"IT IS NOT THE CORRECT PASSWORD PLEASE FIX IT !!";
         return 0;
     }
@@ -46,7 +46,7 @@ int main(){
         else if(s[i]=='#') ans+='@';
         else{
             int ascii = (int)s[i];
-            ascii+=2;
+            ascii+=incrementvalue;
             char ch = (char)ascii;
             ans+=ch;
         }
